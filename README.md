@@ -1,70 +1,104 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mini Blog com React e Sanity
 
-## Available Scripts
+Este projeto é um mini blog criado para fins de aprendizado e experimentação com o **Sanity** como CMS (Content Management System) e **React** no frontend. O objetivo principal é entender a integração entre Sanity e React, trabalhando com dados estruturados, consultas GROQ, e exibição dinâmica de conteúdo em uma SPA moderna.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Exibição de posts dinâmicos buscados via Sanity CMS.
+- Página individual de post com conteúdo rico formatado usando Portable Text.
+- Autores vinculados aos posts com foto e breve biografia.
+- SEO básico implementado com React Helmet.
+- Layout responsivo, moderno e clean com Material-UI (MUI).
+- Paginação simples na página inicial para navegação entre posts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (Create React App)
+- **Sanity CMS** para gerenciamento de conteúdo
+- **Material-UI (MUI)** para componentes e estilo
+- **React Router** para navegação
+- **React Helmet** para SEO
+- **Portable Text** para renderização de conteúdo rico do Sanity
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como rodar localmente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repo.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Configure as variáveis de ambiente (`.env`) com as credenciais do seu projeto Sanity, como `REACT_APP_SANITY_PROJECT_ID` e `REACT_APP_SANITY_DATASET`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Inicie a aplicação em modo de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Abra no navegador: [http://localhost:3000](http://localhost:3000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estrutura do Projeto
 
-## Learn More
+- `/src/components` - Componentes React reutilizáveis, como `PostCard`, `Layout`, etc.
+- `/src/pages` - Páginas principais da aplicação (`Home`, `PostPage`).
+- `/src/sanityClient.js` - Configuração do cliente Sanity para consultas.
+- `/public` - Arquivos estáticos.
+- `.env` - Variáveis de ambiente para conexão segura com Sanity.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deploy
 
-### Code Splitting
+- **Frontend:** Pode ser hospedado no Netlify, Vercel ou outro serviço de hospedagem para SPA.
+- **CMS:** Sanity é um serviço gerenciado na nuvem, não necessita deploy próprio, basta usar o Studio Sanity para criar e editar conteúdo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Como criar posts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use o [Sanity Studio](https://www.sanity.io/studio) para criar, editar e publicar posts. O conteúdo criado será automaticamente refletido na aplicação via API do Sanity.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Aprendizado
 
-### Advanced Configuration
+Este projeto serve como um laboratório para:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Explorar o poder do Sanity CMS e sua linguagem de consulta GROQ.
+- Entender como consumir APIs headless CMS em React.
+- Praticar boas práticas de UI/UX com MUI.
+- Trabalhar SEO básico com React Helmet.
+- Construir um blog simples mas funcional com navegação, paginação e layouts responsivos.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Referências
 
-### `npm run build` fails to minify
+- [Sanity Documentation](https://www.sanity.io/docs)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Material-UI Documentation](https://mui.com/)
+- [React Helmet](https://github.com/nfl/react-helmet)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Contato
+
+Desenvolvido por Moacir David.  
+Para dúvidas, sugestões ou colaborações, entre em contato!
+
+---
+
+Obrigado por visitar este projeto! 🚀📚
