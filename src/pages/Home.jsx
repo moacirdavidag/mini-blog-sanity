@@ -3,7 +3,6 @@ import { client } from "../sanityClient.js";
 import PostCard from "../components/PostCard.jsx";
 import { Grid, Typography, Box, Pagination, Stack } from "@mui/material";
 import { Helmet } from "react-helmet";
-import Layout from "../components/Layout";
 
 const POSTS_PER_PAGE = 5;
 
